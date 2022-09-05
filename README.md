@@ -48,3 +48,6 @@ For faster runs of your tests and scripts, consider skipping ts-node's type chec
 
 # rei-mainnet Address
 0x0077c251e9fC74749016Dcf23A0dBD484896F6bD
+
+# rei-testnet Address
+0x1616abD0FDEf48B58E2a44077a31E603f62d9F73
