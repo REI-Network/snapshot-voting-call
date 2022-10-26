@@ -10,6 +10,11 @@ async function main() {
   );
   const snap = await snapshotcall.deployed();
   console.log("snapshotCall is depolyed at address", snap.address);
+  const tx1 = await snapshotcall.transferOwnership(
+    "0x443Ee467C95fC19C39D0B84cD20D9f5ced207581"
+  );
+  await tx1.wait();
+  console.log("transferOwnership is done, new owner is ", await snap.owner());
 }
 
 // We recommend this pattern to be able to use async/await everywhere
