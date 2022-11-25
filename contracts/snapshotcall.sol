@@ -38,7 +38,7 @@ contract SnapshotCall is Ownable {
         }
         delete ruleMultiplier[i];
         for (j; j < newRuleLength; j++) {
-            if (i > 0) {
+            if (j > 0) {
                 require(_rule[j] > _rule[j - 1], "rule must be ascending");
             }
             rule.set(j, _rule[j]);
@@ -74,5 +74,9 @@ contract SnapshotCall is Ownable {
             }
         }
         return totalVoteWithMulti = (totalVote.mul(ruleMultiplier[i])).div(100);
+    }
+
+    function getRule(uint256 index) public view returns (uint256) {
+        return rule.get(index);
     }
 }
